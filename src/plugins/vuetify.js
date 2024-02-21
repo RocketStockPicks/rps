@@ -10,6 +10,6 @@ Vue.use(Embed);
 
 export default new Vuetify({
   icons: {
-    iconfont: "md" || "fa" || "md",
+    iconfont: "mdi" || "fa" || "md",
   },
 });

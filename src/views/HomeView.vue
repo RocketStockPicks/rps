@@ -1,7 +1,7 @@
 <template>
-  <v-app>
-    <div id="app">
-      <Navbar />
+  <v-app >
+    
+     
 
 
       <!-- <v-container fluid>
@@ -37,6 +37,7 @@
       </v-col>
 
     </v-container> -->
+    <Blog />
       <h3>Free Youtube Videos</h3>
       <div>
         <FreeYoutubeVideos />
@@ -53,21 +54,24 @@
         <Courses />
       </div>
       <br>
-      <h3>Testinomials</h3>
-      <div>
+        <div class="block outlined">
+        <h2 class="text-center">Testinomials</h2> 
+      
         <Testinomials />
       </div>
       <div class="footer">
+        <v-footer>
         <Foot />
+        </v-footer>
       </div>
 
 
-    </div>
+    
   </v-app>
 </template>
 
 <script>
-import Navbar from '../components/Navigation-Bar'
+
 import Blog from '../components/Blogs-Page'
 import FreeYoutubeVideos from '../components/Free-Youtube-Videos'
 import Foot from '../components/Footer'
@@ -78,7 +82,7 @@ export default {
   name: 'Home-page',
 
   components: {
-    Navbar,
+    
     FreeYoutubeVideos,
     Blog,
     Foot,
@@ -148,7 +152,7 @@ export default {
 }
 
 #app {
-  background-image: url("/Users/tanuj/Documents/rocket-stock-picks/public/wallpaper2.jpg");
+  
   font-family: 'Red Rose', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
