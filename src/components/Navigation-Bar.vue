@@ -1,30 +1,50 @@
 <template>
-<v-container>
-   <v-toolbar flat>
-        <v-badge- color="#D5F0DDB" dot>
-            <v-img src="Logo.jpeg" contain width=50></v-img>
-        </v-badge->
-        <v-toolbar-title class="ml-4">
-            <span class="green--text"><h2>Rocket Stock Picks</h2></span>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-            <v-btn text  >
-                Home
-            </v-btn>
-             <v-btn text >
-                About
-            </v-btn>
-             <v-btn text >
-                Contact
-            </v-btn>
-        </v-toolbar-items>
-   </v-toolbar>
+<v-container   fluid ma-0 >
+      
+  <div class="main-container">
+  <v-toolbar elevation="0" class="main-toolbar" >
+   <img 
+        class="round"
+        src="../assets/Logo-1.png"
+        height="64px"
+        width="70px"
+      />
+    <v-spacer></v-spacer>
+    <v-toolbar-items class="toolbar-items">
+      <v-btn text> Home </v-btn>
+      <v-btn text> About </v-btn>
+      <v-btn text> Contact </v-btn>
+    </v-toolbar-items>
+  </v-toolbar>
+  </div>
 </v-container>
 </template>
 
 <script>
-
 </script>
 
-<style></style> 
+<style>
+.round {
+  border-radius: 100%;
+    margin-left:20% ;
+ 
+  
+}
+.toolbar-items{
+    margin-right: 10%;
+    padding: 20px;
+  
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight:900;
+}
+.main-toolbar{
+    box-shadow: none;
+    height: 100px;
+   
+
+}
+.main-container{
+    background-image: url("../assets/header-g.png");
+}
+
+</style> 

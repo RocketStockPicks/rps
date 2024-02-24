@@ -9,14 +9,14 @@
       class="indigo lighten-1 white--text text-center"
     >
       <v-card-text>
-        <v-btn
+        <v-btn :href="icon.url" target="_blank"
           v-for="icon in icons"
-          :key="icon"
+          :key="icon.id"
           class="mx-4 white--text"
           icon
         >
           <v-icon size="24px">
-            {{ icon }}
+            {{ icon.id }}
           </v-icon>
         </v-btn>
       </v-card-text>
@@ -38,10 +38,12 @@
 export default {
     data: () => ({
         icons: [
-            'fab fa-facebook',
-            'twitter',
-            'mdi-linkedin',
-            'mdi-instagram',
+            {id:'fab fa-facebook',url:'https://www.instagram.com/rocketstockpicks/'},
+            {id:'fab fa-twitter',url:'https://www.instagram.com/rocketstockpicks/'},
+            {id:'mdi-linkedin',url:'https://www.instagram.com/rocketstockpicks/'},
+            {id:'mdi-instagram',url:'https://www.instagram.com/rocketstockpicks/'}
+
+           
         ],
     }),
 }

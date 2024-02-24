@@ -60,7 +60,7 @@
 import Modal from './components/Modal.vue'
 export default {
   name: 'HelloWorld',
-  components: { Modal }
+  components: { Modal },
 
     data: () => ({
     ecosystem: [

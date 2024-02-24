@@ -37,27 +37,30 @@
       </v-col>
 
     </v-container> -->
-    <Blog />
-      <h3>Free Youtube Videos</h3>
+    <div class="main">
+      <Carousel />
+      
       <div>
         <FreeYoutubeVideos />
       </div>
-
-
-      <h3>Blogs</h3>
-
-      <div class="blogs">
-        <Blog />
-      </div>
-      <h3>Courses</h3>
+      
       <div>
         <Courses />
       </div>
-      <br>
+   
+      
+      <Premium/>
+ 
+
         <div class="block outlined">
-        <h2 class="text-center">Testinomials</h2> 
+        
       
         <Testinomials />
+      </div>
+
+      <!-- <h3>Blogs</h3> -->
+      <div class="blogs">
+        <Blog />
       </div>
       <div class="footer">
         <v-footer>
@@ -65,7 +68,7 @@
         </v-footer>
       </div>
 
-
+</div>
     
   </v-app>
 </template>
@@ -77,6 +80,8 @@ import FreeYoutubeVideos from '../components/Free-Youtube-Videos'
 import Foot from '../components/Footer'
 import Courses from '../components/Courses'
 import Testinomials from '@/components/Testinomials.vue'
+import Premium from '@/components/Premium.vue'
+import Carousel from '@/components/Carousel.vue'
 //import Modal from '../components/Modal.vue'
 export default {
   name: 'Home-page',
@@ -87,13 +92,25 @@ export default {
     Blog,
     Foot,
     Courses,
-    Testinomials
+    Testinomials,
+    Carousel,
+    Premium
     //Modal
   },
 }
 </script>
 
 <style>
+.main{
+  display: flex;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
+  justify-content: space-evenly;
+  align-items: center;
+  /* row-gap: 30px; */
+  
+}
 .fytv {
 
   background-color: yellow;
@@ -153,7 +170,7 @@ export default {
 
 #app {
   
-  font-family: 'Red Rose', cursive;
+  font-family:Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -164,7 +181,7 @@ export default {
   /* position:relative; */
   /* fallback for old browsers */
 
-  min-height: 100vh;
+
   width: 100%;
 }
 
