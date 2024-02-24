@@ -1,15 +1,15 @@
 <template>
-  <div class="main">
+  <div class="main sm-12 xs-12 md-6" xs=12 sm="12">
     <div>
         <v-text style="color:green small ligten-5" >WANT TO LEARN STOCK MARKET</v-text>
-      <h1>Watch The Video Below</h1>
+      <h1 class="sm-12 xs-10">Watch The Video Below</h1>
     </div>
     <div class="content">
-      <v-container class="container" height="400">
-        <v-row >
-          <v-col class="column">
+      <v-container class="container" height="auto">
+        <v-row xs="4">
+          <v-col class="column" xs="4">
             <v-card class="card">
-              <v-card-title class="yellow lighten-5" style="color:green">Option Trading</v-card-title>
+              <v-card-title xs="1" sm="4" class="yellow lighten-5" style="color:green">Option Trading</v-card-title>
               <iframe
                 height="75%"
                 width="90%"

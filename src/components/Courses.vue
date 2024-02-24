@@ -108,13 +108,7 @@ export default {
     justify-content: space-between;
     
 }
-.content{
-    /* display: flex; */
-    /* justify-content: start; */
-    /* background: aqua; */
-    /* margin-left:20%;
-    margin-right:20%; */
-}
+
 .content-body{
     direction: flex;
     padding-left: 15%;

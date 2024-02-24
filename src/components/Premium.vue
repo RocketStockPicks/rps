@@ -1,7 +1,9 @@
 <template>
 
-  <v-container max-width="100%" class=" lighten-5">
-      <div class="content">
+  <v-container  class="lighten-5" xs="6" 
+  sm="12" 
+  md="3">
+    <div class="content col-sm-6" >
     <h2 class="lighten-5" style="color:black;margin-bottom:2%;margin-top:2%">WHAT YOU EXPECT FROM US</h2>
     <v-divider></v-divider>
     <v-row max-width="100%" >
