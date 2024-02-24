@@ -1,3 +1,3 @@
 module.exports= {
-publicPath: process.env.NODE_ENV==="production"?"/rps":"/"
+publicPath: process.env.NODE_ENV === "production"?"/deploy":"/"
 }
