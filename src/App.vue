@@ -1,8 +1,6 @@
 <template>
   <v-app>
-   
-      <Navbar />
-    <v-divider></v-divider>
+    <Navbar />
 
     <v-main>
       <router-view />
@@ -11,13 +9,20 @@
 </template>
 
 <script>
-import Navbar from './components/Navigation-Bar'
+import Navbar from "./components/Navigation-Bar";
 export default {
-  name: 'App',
+  name: "App",
 
   data: () => ({
     //
   }),
-  components:{Navbar}
+  components: { Navbar },
 };
 </script>
+<style >
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+</style>

@@ -1,125 +1,65 @@
 <template>
-  <v-app >
+  <v-app>
     
-     
+    <div class="mall">
 
-
-      <!-- <v-container fluid>
-      <v-col cols="12">
-        <v-card class="mx-auto rounded-xl" flat>
-          <v-img src="Logo.jpeg" max-height="20px" max-width="20px" contain>
-            <v-card-title class="top ml-10">
-              <h2 class="title1">Order your</h2>
-            </v-card-title>
-            <v-card-title class="ml-10 mt-n8">
-              <h2 class="title2">Daily Groceries</h2>
-            </v-card-title>
-            <v-card-text class="ml-10">
-              <h3 class="green--text">#Free Delivery</h3>
-            </v-card-text>
-
-          </v-img>
-        </v-card>
-        <v-card flat color="#FAFAFA" class="mt-8 py-5 px-16">
-          <div style="
-                position: absolute;
-                margin-left: auto;
-                margin-right: auto;
-                left: 0;
-                right: 0;
-                text-align: center;
-              ">
-            <h3>Free Youtube Videos</h3>
-          </div>
-
-        </v-card>
-
-      </v-col>
-
-    </v-container> -->
-    <div class="main">
-      <Carousel />
       
+    
+  
+
       <div>
         <FreeYoutubeVideos />
       </div>
-      
+
       <div>
         <Courses />
       </div>
-   
-      
-      <Premium/>
- 
 
-        <div class="block outlined">
-        
-      
+    <div>
+      <About/>
+    </div>
+
+      <Premium />
+
+      <div class="block outlined">
         <Testinomials />
       </div>
 
       <!-- <h3>Blogs</h3> -->
-      <div class="blogs">
-        <Blog />
-      </div>
-      <div class="footer">
+     
+      <div >
         <v-footer>
-        <Foot />
+          <Foot />
         </v-footer>
       </div>
-
-</div>
-    
+    </div>
   </v-app>
 </template>
 
 <script>
 
-import Blog from '../components/Blogs-Page'
-import FreeYoutubeVideos from '../components/Free-Youtube-Videos'
-import Foot from '../components/Footer'
-import Courses from '../components/Courses'
-import Testinomials from '@/components/Testinomials.vue'
-import Premium from '@/components/Premium.vue'
-import Carousel from '@/components/Carousel.vue'
-//import Modal from '../components/Modal.vue'
+import FreeYoutubeVideos from "../components/Free-Youtube-Videos";
+import Foot from "../components/Footer";
+import Courses from "../components/Courses";
+import Testinomials from "@/components/Testinomials.vue";
+import Premium from "@/components/Premium.vue";
+
+import About from '../components/About.vue'
 export default {
-  name: 'Home-page',
+  name: "Home-page",
 
   components: {
-    
     FreeYoutubeVideos,
-    Blog,
     Foot,
     Courses,
     Testinomials,
-    Carousel,
-    Premium
-    //Modal
+    Premium,
+    About
   },
-}
+};
 </script>
 
 <style>
-.main{
-  display: flex;
-  flex-direction: column;
-  padding-left: 5%;
-  padding-right: 5%;
-  justify-content: space-evenly;
-  align-items: center;
-  /* row-gap: 30px; */
-  
-}
-.fytv {
-
-  background-color: yellow;
-  flex-grow: 1;
-}
-
-.marginLeft {
-  margin-left: -90px;
-}
 
 .blogs {
   margin-top: 20px;
@@ -136,41 +76,14 @@ export default {
   margin-bottom: 100px;
 }
 
-
-
 .theme--light.v-sheet--outlined.mobile {
   border: 2px solid black !important;
 }
 
-@media only screen and (max-width: 600px) {
-  h2.title1 {
-    font-size: 15px;
-  }
 
-  h2.title2 {
-    font-size: 15px;
-  }
-
-  .top {
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .top {
-    margin-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .top {
-    margin-top: 120px;
-  }
-}
 
 #app {
-  
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -182,10 +95,5 @@ export default {
   /* fallback for old browsers */
 
 
-  width: 100%;
-}
-
-.footer {
-  background-color: pink;
 }
 </style>

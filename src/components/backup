@@ -99,3 +99,55 @@ export default {
 
      
     
+<v-col lg="4">
+    <v-card
+      elevation="10"
+      class="mx-auto"
+      height="100%"
+      width="300px"
+      style="background-color: transparent"
+      tile
+    >
+      <v-list-item-avatar height="80px" width="80px">
+        <v-img src="../assets/Kumari.png"></v-img>
+      </v-list-item-avatar>
+      <div>
+        <i class="fa-solid fa-star md-5"></i>
+        <i class="fa-solid fa-star md-5"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+      </div>
+
+      <v-card-subtitle
+        ><b>Mrs. Kumari( Manager in Big 4 )</b></v-card-subtitle
+      >
+      <v-card-text class="p-description"
+        ><v-icon color="blue"> fa-quote-left</v-icon> 
+        <v-icon color="blue"> fa-quote-right</v-icon></v-card-text
+      >
+    </v-card>
+  </v-col>
+  <v-col lg="4">
+    <v-card elevation="10" class="mx-auto" max-width="300">
+      <v-list lines="two"> </v-list>
+
+      <v-list-item-avatar height="80px" width="80px">
+        <v-img :src="item.img"></v-img>
+      </v-list-item-avatar>
+      <div>
+        <i class="fa-solid fa-star md-5"></i>
+        <i class="fa-solid fa-star md-5"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+      </div>
+      <v-card-subtitle class="p-description"
+        >{{item.name}}</v-card-subtitle
+      >
+      <v-card-text class="p-description"
+        ><v-icon color="blue"> fa-quote-left</v-icon> {{item.testimonial}} 
+        <v-icon color="blue"> fa-quote-right</v-icon></v-card-text
+      >
+    </v-card>
+  </v-col>

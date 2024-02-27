@@ -28,7 +28,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+         <strong>All Right Reserved- RocketStockPicks</strong>
       </v-card-text>
     </v-card>
   </v-footer>

@@ -1,133 +1,87 @@
 <template>
-  <div class="main">
+  <div class="main-testimonial" >
     <div>
-      <h2 class="text-center">Testimonials</h2>
+      <h2  style="color: rgb(70, 0, 7); margin-top: 1%; margin-bottom:3%; letter-spacing: 2px">
+        HEAR FROM OUR PREMIUM SUBSCRIBERS
+      </h2>
     </div>
-    <v-slide-group justify-center>
-        <v-col lg="2">
-    <v-card class="mx-auto "  max-width="300" tile>
-       
-      <v-list lines="two"> </v-list>
-     
-       <v-list-item-avatar>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
-          </v-list-item-avatar>
-            <div>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
-          
-          </div>
-           <v-card-subtitle>Subscriber Since 1 year</v-card-subtitle>
-           
-          <v-card-text><v-icon style="color:blue;"> fa-quote-left</v-icon> ipsum dolor sit amet consectetur adipisicing elit. Ratione iure nesciunt minus earum aliquam id possimus, magni veritatis nemo laborum nihil voluptatibus corporis ad corrupti quo sunt laudantium, quos hic! <v-icon> fa-quote-right</v-icon></v-card-text>
+    <v-sheet
+    
+    elevation="8"
+    
+  >
+    <v-slide-group v-model="model" 
+      class="">
+       <v-slide-group-item v-for="item in items" :key="item.id" >
       
-    </v-card>
-    </v-col>
-    <v-col lg="2">
-    <v-card class="mx-auto "  max-width="300" tile>
-      <v-list lines="two"> </v-list>
-     
-       <v-list-item-avatar>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
+        <v-card
+          class="p-card  ma-12"
+          elevation="10"
+          width="300"
+          height="400"
+          tile
+          style="background-color: transparent"
+        >
+          <v-list-item-avatar height="100px" width="100px">
+            <v-img :src="item.img"></v-img>
           </v-list-item-avatar>
           <div>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          
+            <i class="fa-solid fa-star md-5"></i>
+            <i class="fa-solid fa-star md-5"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
           </div>
-           <v-card-subtitle>Subscriber Since 1 year</v-card-subtitle>
-          <v-card-text><v-icon> fa-quote-left</v-icon> ipsum dolor sit amet consectetur adipisicing elit. Ratione iure nesciunt minus earum aliquam id possimus, magni veritatis nemo laborum nihil voluptatibus corporis ad corrupti quo sunt laudantium, quos hic! <v-icon> fa-quote-right</v-icon></v-card-text>
+          <v-card-subtitle
+            class="p-description"
+            color="brown"
+            style="color: rgb(70, 0, 7)"
+            ><b>{{ item.name }}</b></v-card-subtitle
+          >
+          <v-card-text class="p-description"
+            ><v-icon color="blue"> fa-quote-left</v-icon>
+            {{ item.testimonial }}
+            <v-icon color="blue"> fa-quote-right</v-icon></v-card-text
+          >
+        </v-card>
+        
       
-    </v-card>
-    </v-col>
-    <v-col lg="2">
-    <v-card class="mx-auto "  max-width="300" tile>
-      <v-list lines="two"> </v-list>
-     
-       <v-list-item-avatar>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
-          </v-list-item-avatar>
-           <div>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          
-          </div>
-           <v-card-subtitle>Subscriber Since 1 year</v-card-subtitle>
-          <v-card-text><v-icon> fa-quote-left</v-icon> ipsum dolor sit amet consectetur adipisicing elit. Ratione iure nesciunt minus earum aliquam id possimus, magni veritatis nemo laborum nihil voluptatibus corporis ad corrupti quo sunt laudantium, quos hic! <v-icon> fa-quote-right</v-icon></v-card-text>
-      
-    </v-card>
-    </v-col>
-    <v-col lg="2">
-    <v-card class="mx-auto "  max-width="300" tile>
-      <v-list lines="two"> </v-list>
-     
-       <v-list-item-avatar>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
-          </v-list-item-avatar>
-          <div>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i  style="color:#ffa534; margin-left:2%" class="fa-solid fa-star md-5"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star"></i>
-          <i style="color:#ffa534; margin-left:2%" class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
-          
-          </div>
-           <v-card-subtitle>Subscriber Since 1 year</v-card-subtitle>
-          <v-card-text><v-icon> fa-quote-left</v-icon> ipsum dolor sit amet consectetur adipisicing elit. Ratione iure nesciunt minus earum aliquam id possimus, magni veritatis nemo laborum nihil voluptatibus corporis ad corrupti quo sunt laudantium, quos hic! <v-icon> fa-quote-right</v-icon></v-card-text>
-      
-    </v-card>
-    </v-col>
-    <v-col lg="2">
-    <v-card class="mx-auto "  max-width="300" tile>
-      <v-list lines="two"> </v-list>
-     
-       <v-list-item-avatar>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
-          </v-list-item-avatar>
-          <v-card-text><v-icon> fa-quote-left</v-icon> ipsum dolor sit amet consectetur adipisicing elit. Ratione iure nesciunt minus earum aliquam id possimus, magni veritatis nemo laborum nihil voluptatibus corporis ad corrupti quo sunt laudantium, quos hic! <v-icon> fa-quote-right</v-icon></v-card-text>
-      
-    </v-card>
-    </v-col>
-    <v-col lg="2">
-    <v-card class="mx-auto "  max-width="300" >
-      <v-list lines="two"> </v-list>
-     
-       <v-list-item-avatar>
-            <v-img src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"></v-img>
-          </v-list-item-avatar>
-          <v-rating color="yellow-darken"></v-rating>
-          <v-card-text><v-icon> fa-quote-left</v-icon> ipsum dolor sit amet consectetur adipisicing elit. Ratione iure nesciunt minus earum aliquam id possimus, magni veritatis nemo laborum nihil voluptatibus corporis ad corrupti quo sunt laudantium, quos hic! <v-icon> fa-quote-right</v-icon></v-card-text>
-      
-    </v-card>
-    </v-col>
+       </v-slide-group-item>
     </v-slide-group>
+    </v-sheet>
   </div>
-
 </template>
 <script>
 export default {
   data: () => ({
     items: [
       {
-        title: "Item #1",
-        value: 1,
+        id: "0",
+        name: "Mr. Basaiwala (CA)",
+        img: require("../assets/Nitesh.png"),
+        testimonial:
+          "Stock selection and highlighting is an niche expertise, and an important element of Rocket Stock Pick. They showcase Results and Value. They highlight the outcomes they deliver and the value to the clients. Happy Investor under their guidance.",
       },
       {
-        title: "Item #2",
-        value: 2,
+        id: "1",
+        name: "Mrs. Kumari  (Manager in Big 4)",
+        img: require("../assets/Kumari.png"),
+        testimonial:
+          "My first trading experience with your guidance is amazing. You figured out the way to convert loss into profit on quite a few occasions. I would like to thank you for all your efforts. I do hope we share great success together👏👌 , keep up the good work😍",
       },
       {
-        title: "Item #3",
-        value: 3,
+        id: "2",
+        name: "Mr. Sinha (LIC)",
+        img: require("../assets/Sinha.png"),
+        testimonial:
+          "Prediction of Swing well before anyone's prediction is amazing and gives you good RR.Thanks and best wishes @RocketStockPicks",
+      },
+      {
+        id: "3",
+        name: "Mr. Sinha (LIC)",
+        img: require("../assets/Sinha.png"),
+        testimonial:
+          "Prediction of Swing well before anyone's prediction is amazing and gives you good RR.Thanks and best wishes @RocketStockPicks",
       },
     ],
   }),
@@ -143,16 +97,21 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.main {
+.main-testimonial {
   display: flex;
   flex-direction: column;
   column-gap: 30px;
   /* background: rgb(231, 230, 230); */
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 25px;
   min-width: 100vw;
+  background-color: whitesmoke;
 
   padding: 3%;
   justify-content: space-between;
-  margin: 3%;
+  margin-left: 0%;
+  margin-top:3% ;
+  
 }
 .content {
   height: 100vh;
@@ -161,6 +120,8 @@ export default {
   justify-content: space-evenly;
   margin: 5%;
   background-color: transparent;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 25px;
 }
 .contentrow {
   /* background-color: aqua; */
@@ -185,5 +146,17 @@ export default {
   flex-direction: column;
   justify-content: center;
   background-color: transparent;
+}
+.p-description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  text-align: center;
+}
+.v-card__text {
+  color: white;
+}
+i {
+  color: #ffa534;
+  margin-left: 2%;
 }
 </style>

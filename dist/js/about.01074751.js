@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkrocket_stock_picks"]=self["webpackChunkrocket_stock_picks"]||[]).push([[594],{1794:function(t,s,n){n.r(s),n.d(s,{default:function(){return a}});var u=function(){var t=this;t._self._c;return t._m(0)},c=[function(){var t=this,s=t._self._c;return s("div",{staticClass:"about"},[s("h1",[t._v("This is an about page")])])}],e=n(1656),r={},i=(0,e.A)(r,u,c,!1,null,null,null),a=i.exports}}]);
-//# sourceMappingURL=about.01074751.js.map

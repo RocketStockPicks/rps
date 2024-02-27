@@ -1,16 +1,21 @@
 <template>
   <div class="main">
+    <div>
+      <video autoplay muted loop id="myVideo">
+  <source src="rain.mp4" type="video/mp4">
+</video>
+    </div>
     <v-container>
       <v-carousel 
-        class="fill-height"
+       
         contain
         show-arrows-on-hover
         hide-delimiter-background 
         cycle="1000"
       >
-        <v-carousel-item class="carousel-content">
+        <!-- <v-carousel-item class="carousel-content">
           <v-row>
-            <v-col >
+            <v-col cols="6">
                
                 
               <div >
@@ -21,17 +26,26 @@
               </div>
                
             </v-col>
+
+             <v-col cols="6" >
+               
+                
+              <v-img
+            class="fill-height-img"
+            src="../assets/main-carousel-2.jpg"
+          ></v-img>
+            </v-col>
           
           </v-row>
-        </v-carousel-item>
+        </v-carousel-item> -->
         <!-- <v-carousel-item>
           <v-img
             class="fill-height"
-            src="../assets/main-carousel-2.jpg"
+            src="../assets/carousel-col.jpeg"
           ></v-img>
 
       
-        </v-carousel-item> -->
+        </v-carousel-item>  -->
 
         <v-carousel-item
           class="fill-height"
@@ -67,8 +81,9 @@ export default {
 }
 .fill-height {
   flex-shrink: 0;
-  height: 500px;
+  height: 100%;
   background-position: inherit;
+  justify-self: stretch;
 }
 
 .carousel-title{
@@ -80,9 +95,10 @@ export default {
     
 } 
 .carousel-content{
-    background-image: url("../assets/main-carousel-2.jpg");
+   
     background-size:100%;
     min-width: 100%;
+    justify-items: stretch;
 }
 
 p{
