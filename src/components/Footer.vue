@@ -1,50 +1,71 @@
 <template>
-  <v-footer
-    dark
-    padless
-  >
-    <v-card
-      flat
-      tile
-      class="indigo lighten-1 white--text text-center"
-    >
-      <v-card-text>
-        <v-btn :href="icon.url" target="_blank"
+  <div class="foot-r">
+    <v-row class="foot-row">
+      <v-col>
+        <strong>
+          <v-icon class="mx-4 white--text">mdi-copyright </v-icon> All Right
+          Reserved - RocketStockPicks</strong
+        >
+      </v-col>
+      <v-col>
+        <v-btn
+          :href="icon.url"
+          target="_blank"
           v-for="icon in icons"
           :key="icon.id"
           class="mx-4 white--text"
           icon
         >
-          <v-icon size="24px">
+          <v-icon size="20px">
             {{ icon.id }}
           </v-icon>
         </v-btn>
-      </v-card-text>
+      </v-col>
 
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-         <strong>All Right Reserved- RocketStockPicks</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+      <v-col>
+        <strong> info@rocketstockpicks.co.in </strong>
+      </v-col>
+    </v-row>
+  </div>
 </template>
   
 <script>
 export default {
-    data: () => ({
-        icons: [
-            {id:'fab fa-facebook',url:'https://www.instagram.com/rocketstockpicks/'},
-            {id:'fab fa-twitter',url:'https://www.instagram.com/rocketstockpicks/'},
-            {id:'mdi-linkedin',url:'https://www.instagram.com/rocketstockpicks/'},
-            {id:'mdi-instagram',url:'https://www.instagram.com/rocketstockpicks/'}
-
-           
-        ],
-    }),
-}
+  data: () => ({
+    icons: [
+      {
+        id: "fab fa-facebook",
+        url: "https://www.instagram.com/rocketstockpicks/",
+      },
+      {
+        id: "fab fa-twitter",
+        url: "https://www.instagram.com/rocketstockpicks/",
+      },
+      {
+        id: "mdi-linkedin",
+        url: "https://www.instagram.com/rocketstockpicks/",
+      },
+      {
+        id: "mdi-instagram",
+        url: "https://www.instagram.com/rocketstockpicks/",
+      },
+    ],
+  }),
+};
 </script>
+
+<style scoped>
+.foot-r {
+  background-size: fill;
+  background-color: #1da1f2;
+  width: 100%;
+}
+.col {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+strong {
+  color: white;
+}
+</style>

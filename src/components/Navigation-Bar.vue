@@ -1,7 +1,7 @@
 <template>
   <div class="containers">
     <v-btn class="mx-2" large style="color: white" text> <h3>Home</h3> </v-btn>
-    <v-btn style="color: white" text> <h3>About</h3> </v-btn>
+    <v-btn @click="scrollItem('about-us')" class="nav-btn"  style="color: white" text> <h3>About</h3> </v-btn>
      <v-btn style="color: white" text> <h3>Success Stories</h3> </v-btn>
     <v-btn style="color: white" text> <h3>CONTACT</h3> </v-btn>
     <div class="nav-bar">
@@ -11,6 +11,16 @@
 </template>
 
 <script>
+export default{
+   methods:{
+    scrollItem(ref){
+const el = document.getElementById(ref);
+      el.scrollIntoView({behavior: "smooth"});
+      
+    }
+  }
+}
+
 </script>
 
 <style>
@@ -36,4 +46,8 @@
 .nav-bar {
   object-fit: fill;
 }
+.nav-btn{
+transform-style: flat;
+}
+
 </style> 

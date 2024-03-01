@@ -1,5 +1,5 @@
 <template>
-  <v-container  style="color:white;  background-color: rgb(10, 10, 39); border-radius:10%;">
+  <v-container ref="about-us" id="about-us" style="color:white;  background-color: rgb(10, 10, 39); border-radius:10%;">
   
     <h2 style="margin-top:5%; letter-spacing:2px;">KNOW MORE ABOUT US</h2>
       <hr/>
